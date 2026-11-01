@@ -16,14 +16,17 @@ pip install -r requirements.txt
 
 ## Exécution
 
-Avec l'environnement virtuel activé, depuis la racine du projet :
+Avec l'environnement virtuel activé, les tests se lancent **depuis le dossier de chaque étape** :
 
 ```bash
-python3 01step1_python_data_structure/main.py   # essais de l'étape 1
-pytest -v                                       # tous les tests (étapes 1 et 2)
+cd 03step3_chargement
+python -m src.main         # charge les 5 sources et affiche l'inventaire des anomalies
+python -m pytest -v        # tests de l'étape
 ```
 
-Pour lancer seulement les tests d'une étape, se placer dans son dossier puis lancer `python -m pytest -v`.
+Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la racine.
+
+`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 et 3 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
 
 ## Avancement
 
@@ -31,7 +34,7 @@ Pour lancer seulement les tests d'une étape, se placer dans son dossier puis la
 |---|---|---|
 | 1 | Python et structures de données | ✅ Terminée — voir [01step1_python_data_structure/README.md](01step1_python_data_structure/README.md) |
 | 2 | Programmation modulaire et POO | ✅ Terminée — voir [02step2_POO/README.md](02step2_POO/README.md) |
-| 3 | Chargement des données | À faire |
+| 3 | Chargement des données | ✅ Terminée — voir [03step3_chargement/README.md](03step3_chargement/README.md) |
 | 4 | Validation et nettoyage | À faire |
 | 5 | NumPy et Pandas | À faire |
 | 6 | Jupyter Notebook | À faire |
@@ -44,7 +47,9 @@ immoanalyse_dataset/
 ├── sources/                      # 5 flux bruts — ne jamais modifier
 ├── referentiels/                 # géographie, catégories, dictionnaire, règles métier
 ├── 01step1_python_data_structure/  # étape 1 : fonctions de base et tests
-├── 02step2_POO/                    # étape 2 : modules (src/), classe RegleValidation, tests/├── requirements.txt
+├── 02step2_POO/                    # étape 2 : modules (src/), classe RegleValidation, tests/
+├── 03step3_chargement/             # étape 3 : lecture et harmonisation des 5 sources, inventaire
+├── requirements.txt
 └── README.md
 ```
 
@@ -111,6 +116,12 @@ Les statuts sont « Vendu », « Vente conclue » et « Acte signé ».
 
 **Plateforme : le nombre de pièces est traité comme un nombre de chambres.**
 Les terrains et locaux commerciaux ont toujours 0 pièce, et les valeurs (0 à 6) ont la même échelle que les chambres des autres sources. C'est une **hypothèse** : une pièce n'est pas forcément une chambre.
+
+**Plateforme : la devise donne la périodicité.**
+La devise vaut `FCFA` pour les 698 ventes et `FCFA/mois` pour les 177 locations. `FCFA/mois` est traduit en `periodicite = "mensuel"`. C'est la seule source où la périodicité est connue.
+
+**Particuliers : la périodicité des locations est inconnue.**
+Les 219 locations n'indiquent pas de périodicité. Comme pour l'agence, elle reste vide et sera signalée, sans être devinée.
 
 **Agence : seule la feuille « Annonces » contient des biens.**
 La feuille « Params » contient des métadonnées (version, date d'export). Elle n'est pas chargée comme données.
