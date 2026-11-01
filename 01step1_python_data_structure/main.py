@@ -1,5 +1,3 @@
-import sys
-
 # 1 - Jeu d'essai : liste de biens
 biens = [
     {"source": "notaires","id_local": "NOT-02192","type_bien": "Villa","region": "Sédhiou","ville": "Bounkiling","date": "2019-05-09","prix": 320860000.0,"surface": 392.1,"chambres": 3,"salles_bain": None,"type_transaction": "vente","periodicite": None,"statut": "Vendu"},

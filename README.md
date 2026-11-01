@@ -19,16 +19,18 @@ pip install -r requirements.txt
 Avec l'environnement virtuel activé, depuis la racine du projet :
 
 ```bash
-python3 step1_python_data_structure/main.py   # essais de l'étape 1
-pytest -v                                     # tous les tests
+python3 01step1_python_data_structure/main.py   # essais de l'étape 1
+pytest -v                                       # tous les tests (étapes 1 et 2)
 ```
+
+Pour lancer seulement les tests d'une étape, se placer dans son dossier puis lancer `python -m pytest -v`.
 
 ## Avancement
 
 | Étape | Sujet | État |
 |---|---|---|
-| 1 | Python et structures de données | ✅ Terminée — voir [step1_python_data_structure/README.md](step1_python_data_structure/README.md) |
-| 2 | Programmation modulaire et POO | À faire |
+| 1 | Python et structures de données | ✅ Terminée — voir [01step1_python_data_structure/README.md](01step1_python_data_structure/README.md) |
+| 2 | Programmation modulaire et POO | ✅ Terminée — voir [02step2_POO/README.md](02step2_POO/README.md) |
 | 3 | Chargement des données | À faire |
 | 4 | Validation et nettoyage | À faire |
 | 5 | NumPy et Pandas | À faire |
@@ -41,8 +43,9 @@ pytest -v                                     # tous les tests
 immoanalyse_dataset/
 ├── sources/                      # 5 flux bruts — ne jamais modifier
 ├── referentiels/                 # géographie, catégories, dictionnaire, règles métier
-├── step1_python_data_structure/  # étape 1 : fonctions de base et tests
-├── Loaders/                      # étape 3 : chargement des sources (à écrire)
+├── 01step1_python_data_structure/  # étape 1 : fonctions de base et tests
+├── 02step2_POO/                    # étape 2 : modules (src/), classe RegleValidation, tests/
+├── Loaders/                        # fichiers vides créés au départ (les loaders iront dans src/loaders/)
 ├── requirements.txt
 └── README.md
 ```

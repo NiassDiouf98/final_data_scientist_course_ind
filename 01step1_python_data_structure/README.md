@@ -20,7 +20,7 @@ Manipuler des biens immobiliers avec les bases de Python (variables, conditions,
 Depuis la racine du projet, avec l'environnement virtuel activé :
 
 ```bash
-python3 step1_python_data_structure/main.py   # affiche les essais
+python3 01step1_python_data_structure/main.py   # affiche les essais
 pytest -v                                     # lance les 8 tests
 ```
 
