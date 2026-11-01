@@ -1,0 +1,13 @@
+# 1 - Jeu d'essai : liste de biens
+biens = [
+    {"source": "notaires","id_local": "NOT-02192","type_bien": "Villa","region": "Sédhiou","ville": "Bounkiling","date": "2019-05-09","prix": 320860000.0,"surface": 392.1,"chambres": 3,"salles_bain": None,"type_transaction": "vente","periodicite": None,"statut": "Vendu"},
+    {"source": "historique","id_local": "HIS-0001","type_bien": "Studio","region": "Louga","ville": "Linguère","date": "2019-11-19","prix": "26 620 000","surface": 44.7,"chambres": 2,"salles_bain": 1,"type_transaction": "vente","periodicite": None,"statut": None},
+    {"source": "plateforme","id_local": "PLT-00002","type_bien": "Maison","region": "Kolda","ville": "Kolda","date": "2022-09-15","prix": "57.62 millions","surface": 89.6,"chambres": 5,"salles_bain": 3,"type_transaction": "vente","periodicite": None,"statut": "Vendu"},
+    {"source": "historique","id_local": "HIS-0072","type_bien": "Terrain","region": "Ziguinchor","ville": "Bignona","date": "2019-10-16","prix": "N/A","surface": 190.8,"chambres": 0,"salles_bain": 0,"type_transaction": "vente","periodicite": None,"statut": None},
+    {"source": "agence","id_local": "AGT-00836","type_bien": "Villa","region": "Dakar","ville": "Dakar","date": "24/07/2022","prix": 885000,"surface": 437.9,"chambres": 2,"salles_bain": 1,"type_transaction": "location","periodicite": None,"statut": "Disponible" },
+    {"source": "plateforme","id_local": "PLT-00399","type_bien": "Appartement","region": "Sédhiou","ville": "Bounkiling","date": "2021-01-25","prix": 380000,"surface": 136.8,"chambres": 3,"salles_bain": 1,"type_transaction": "location","periodicite": "mensuel","statut": "Loué"},
+    {"source": "plateforme","id_local": "PLT-00080","type_bien": "appart","region": "Matam","ville": "Ourossogui","date": "2020-10-23","prix": 41454000,"surface": 103.6,"chambres": 6,"salles_bain": 2,"type_transaction": "vente","periodicite": None,"statut": "En vente"},
+    {"source": "plateforme","id_local": "PLT-00058","type_bien": "Appartement","region": "Diourbel","ville": "Mbacké","date": "2024-04-04","prix": 116544000,"surface": 160.2,"chambres": 5,"salles_bain": 2,"type_transaction": "vente","periodicite": None,"statut": "En vente"},
+    {"source": "plateforme","id_local": "PLT-00058","type_bien": "Appartement","region": "Diourbel","ville": "Mbacké","date": "2024-04-04","prix": 116544000,"surface": 160.2,"chambres": 5,"salles_bain": 2,"type_transaction": "vente","periodicite": None,"statut": "En vente"
+    }
+]
