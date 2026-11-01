@@ -11,7 +11,7 @@ def test_prix_positif_non_evaluable():
 
 def test_prix_positif_violee_sur_une_copie():
     bien = biens[2].copy()
-    bien["prix"] == "à négocier"
+    bien["prix"] = "à négocier"
     
     assert prix_positif.verifier(bien) == "violee"
 
@@ -25,6 +25,6 @@ def test_type_bien_reconnu_violee_sur_une_copie():
 
 def test_transaction_valide_violee_sur_une_copie():
     bien = biens[6].copy()
-    bien["transaction"] = "achat"
+    bien["type_transaction"] = "achat"
     
     assert transaction_valide.verifier(bien) == "violee"
