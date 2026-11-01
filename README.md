@@ -44,9 +44,7 @@ immoanalyse_dataset/
 ├── sources/                      # 5 flux bruts — ne jamais modifier
 ├── referentiels/                 # géographie, catégories, dictionnaire, règles métier
 ├── 01step1_python_data_structure/  # étape 1 : fonctions de base et tests
-├── 02step2_POO/                    # étape 2 : modules (src/), classe RegleValidation, tests/
-├── Loaders/                        # fichiers vides créés au départ (les loaders iront dans src/loaders/)
-├── requirements.txt
+├── 02step2_POO/                    # étape 2 : modules (src/), classe RegleValidation, tests/├── requirements.txt
 └── README.md
 ```
 

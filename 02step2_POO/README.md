@@ -35,10 +35,10 @@ Avec l'environnement virtuel activé :
 
 ```bash
 cd 02step2_POO
-python -m pytest -v        # lance les 12 tests de l'étape 2
+python -m pytest -v        # lance les 13 tests de l'étape 2
 ```
 
-Depuis la racine du projet, `pytest -v` lance les tests des étapes 1 et 2 (20 tests).
+Depuis la racine du projet, `pytest -v` lance les tests des étapes 1 et 2 (21 tests).
 
 `python -m pytest` ajoute le dossier courant aux chemins où Python cherche les modules. C'est ce qui permet d'écrire `from src.constantes import ...` dans le code et dans les tests.
 
@@ -120,13 +120,13 @@ Les fonctions de condition commencent par `_` (`_prix_est_positif`…). C'est un
 
 ## Les tests
 
-12 tests : les 8 de l'étape 1, répartis selon les modules, et 4 nouveaux pour les règles.
+13 tests : les 8 de l'étape 1, répartis selon les modules, et 5 nouveaux pour les règles.
 
 | Fichier | Tests |
 |---|---|
 | `test_traitement.py` | 6 tests de l'étape 1 (filtrage, prix, type de bien, clé de rapprochement) |
 | `test_validation.py` | 2 tests de l'étape 1 (champs manquants, identifiants en double) |
-| `test_regles.py` | 4 nouveaux tests, détaillés ci-dessous |
+| `test_regles.py` | 5 nouveaux tests, détaillés ci-dessous |
 
 | Test | Bien utilisé | Résultat attendu |
 |---|---|---|
@@ -134,6 +134,7 @@ Les fonctions de condition commencent par `_` (`_prix_est_positif`…). C'est un
 | `test_prix_positif_non_evaluable` | HIS-0072 (`"N/A"`) | `"non_evaluable"` |
 | `test_prix_positif_violee_sur_une_copie` | copie de PLT-00002 avec `"à négocier"` | `"violee"` |
 | `test_type_bien_reconnu_violee_sur_une_copie` | copie de PLT-00080 avec `"Château"` | `"violee"` |
+| `test_transaction_valide_violee_sur_une_copie` | copie de PLT-00080 avec `"achat"` | `"violee"` |
 
 Les cas modifiés travaillent sur une **copie** (`.copy()`) : le jeu d'essai n'est jamais modifié, sinon un test pourrait changer le résultat d'un autre.
 
@@ -141,7 +142,6 @@ Pour vérifier que ces tests détectent les erreurs, la vérification des valeur
 
 ## Limites connues
 
-- **`transaction_valide` n'est pas encore testée.**
 - **Les règles ne sont pas encore appliquées à une liste de biens.** Il n'existe pas encore de fonction qui parcourt `REGLES`, sépare les biens valides de la quarantaine et compte les résultats. Ce sera fait à l'étape 4.
 - **Il manque des règles du cahier des charges** (surface positive, région et ville connues, cohérence prix / transaction…). Elles seront ajoutées à l'étape 4, quand les vraies données seront chargées.
 - Les limites de l'étape 1 restent valables : dates non normalisées, villes accentuées, synonymes recopiés à la main.
