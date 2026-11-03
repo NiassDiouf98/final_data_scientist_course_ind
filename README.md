@@ -19,14 +19,14 @@ pip install -r requirements.txt
 Avec l'environnement virtuel activé, les tests se lancent **depuis le dossier de chaque étape** :
 
 ```bash
-cd 03step3_chargement
-python -m src.main         # charge les 5 sources et affiche l'inventaire des anomalies
+cd 04step4_validation
+python -m src.main         # pipeline complet : nettoyage, validation, quarantaine, doublons, rapport qualité
 python -m pytest -v        # tests de l'étape
 ```
 
 Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la racine.
 
-`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 et 3 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
+`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 à 4 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
 
 ## Avancement
 
@@ -35,7 +35,7 @@ Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la raci
 | 1 | Python et structures de données | ✅ Terminée — voir [01step1_python_data_structure/README.md](01step1_python_data_structure/README.md) |
 | 2 | Programmation modulaire et POO | ✅ Terminée — voir [02step2_POO/README.md](02step2_POO/README.md) |
 | 3 | Chargement des données | ✅ Terminée — voir [03step3_chargement/README.md](03step3_chargement/README.md) |
-| 4 | Validation et nettoyage | À faire |
+| 4 | Validation et nettoyage | ✅ Terminée — voir [04step4_validation/README.md](04step4_validation/README.md) |
 | 5 | NumPy et Pandas | À faire |
 | 6 | Jupyter Notebook | À faire |
 | 7 | Exportation et reproductibilité | À faire |
@@ -49,6 +49,7 @@ immoanalyse_dataset/
 ├── 01step1_python_data_structure/  # étape 1 : fonctions de base et tests
 ├── 02step2_POO/                    # étape 2 : modules (src/), classe RegleValidation, tests/
 ├── 03step3_chargement/             # étape 3 : lecture et harmonisation des 5 sources, inventaire
+├── 04step4_validation/             # étape 4 : nettoyage, règles, quarantaine, doublons, rapport qualité
 ├── requirements.txt
 └── README.md
 ```
@@ -84,6 +85,19 @@ Après chargement, chaque bien, quelle que soit sa source, est représenté avec
 | `statut` | texte | |
 
 Le chargement ne fait que renommer et ranger les colonnes. Toute correction a lieu à l'étape de validation et de nettoyage.
+
+## Résultats de la validation (étape 4)
+
+| Indicateur | Valeur |
+|---|---|
+| Biens reçus | 3 184 |
+| Mis en quarantaine | 187 (5,9 %), dont 136 chez les particuliers |
+| Conservés avec avertissement | 53 |
+| Corrigés (normalisation) | 1 216 |
+| Entièrement conformes | 1 839 (57,8 %) : ni quarantaine, ni avertissement, ni correction |
+| Doublons exacts / conflits / doublons probables | 14 / 0 / 8 |
+
+Le détail est dans le [README de l'étape 4](04step4_validation/README.md).
 
 ### Correspondance des colonnes
 
@@ -122,6 +136,18 @@ La devise vaut `FCFA` pour les 698 ventes et `FCFA/mois` pour les 177 locations.
 
 **Particuliers : la périodicité des locations est inconnue.**
 Les 219 locations n'indiquent pas de périodicité. Comme pour l'agence, elle reste vide et sera signalée, sans être devinée.
+
+**Validation : normaliser d'abord, valider ensuite.**
+Une date `24/07/2022` ou un prix `26 620 000` sont normalisables (`regles_metier.md`). Ils sont corrigés avant que les règles ne s'appliquent. Seul ce qui reste illisible ou impossible part en quarantaine, avec la donnée **brute** et un motif.
+
+**`type_bien` hors référentiel : quarantaine.**
+Le cahier des charges (§6.1) et `regles_metier.md` se contredisent : le premier dit « quarantaine », le second « signaler ». Nous suivons le cahier des charges. Sur les données réelles, les 3 184 types sont reconnus après normalisation.
+
+**Doublons : la date ne fait pas partie de la clé de rapprochement.**
+La clé est `(type_bien, ville, surface, type_transaction)`. La date d'un acte notarié et la date de mise en ligne d'une annonce sont différentes par nature. Les doublons probables sont signalés, jamais fusionnés.
+
+**Conflits d'identifiant : quarantaine.**
+Deux lignes de la même source avec le même identifiant, mais des valeurs différentes : on ne sait pas laquelle est juste. Il n'y en a aucune dans les données actuelles.
 
 **Agence : seule la feuille « Annonces » contient des biens.**
 La feuille « Params » contient des métadonnées (version, date d'export). Elle n'est pas chargée comme données.
