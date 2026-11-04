@@ -19,14 +19,14 @@ pip install -r requirements.txt
 Avec l'environnement virtuel activé, les tests se lancent **depuis le dossier de chaque étape** :
 
 ```bash
-cd 04step4_validation
+cd 05step5_analyse
 python -m src.main         # pipeline complet : nettoyage, validation, quarantaine, doublons, rapport qualité
 python -m pytest -v        # tests de l'étape
 ```
 
 Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la racine.
 
-`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 à 4 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
+`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 à 5 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
 
 ## Avancement
 
@@ -36,7 +36,7 @@ Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la raci
 | 2 | Programmation modulaire et POO | ✅ Terminée — voir [02step2_POO/README.md](02step2_POO/README.md) |
 | 3 | Chargement des données | ✅ Terminée — voir [03step3_chargement/README.md](03step3_chargement/README.md) |
 | 4 | Validation et nettoyage | ✅ Terminée — voir [04step4_validation/README.md](04step4_validation/README.md) |
-| 5 | NumPy et Pandas | À faire |
+| 5 | NumPy et Pandas | ✅ Terminée — voir [05step5_analyse/README.md](05step5_analyse/README.md) |
 | 6 | Jupyter Notebook | À faire |
 | 7 | Exportation et reproductibilité | À faire |
 
@@ -50,6 +50,7 @@ immoanalyse_dataset/
 ├── 02step2_POO/                    # étape 2 : modules (src/), classe RegleValidation, tests/
 ├── 03step3_chargement/             # étape 3 : lecture et harmonisation des 5 sources, inventaire
 ├── 04step4_validation/             # étape 4 : nettoyage, règles, quarantaine, doublons, rapport qualité
+├── 05step5_analyse/                # étape 5 : statistiques NumPy/Pandas, prix au m², seuils du §6.2
 ├── requirements.txt
 └── README.md
 ```
@@ -86,18 +87,31 @@ Après chargement, chaque bien, quelle que soit sa source, est représenté avec
 
 Le chargement ne fait que renommer et ranger les colonnes. Toute correction a lieu à l'étape de validation et de nettoyage.
 
-## Résultats de la validation (étape 4)
+## Résultats de la validation (étapes 4 et 5)
 
 | Indicateur | Valeur |
 |---|---|
 | Biens reçus | 3 184 |
 | Mis en quarantaine | 187 (5,9 %), dont 136 chez les particuliers |
-| Conservés avec avertissement | 53 |
+| Conservés avec avertissement | 91 (53 à l'étape 4, avant les seuils du §6.2) |
 | Corrigés (normalisation) | 1 216 |
-| Entièrement conformes | 1 839 (57,8 %) : ni quarantaine, ni avertissement, ni correction |
+| Entièrement conformes | 1 834 (57,6 %) : ni quarantaine, ni avertissement, ni correction |
 | Doublons exacts / conflits / doublons probables | 14 / 0 / 8 |
+| Biens propres et uniques | 2 983 (2 534 ventes, 449 locations) |
 
-Le détail est dans le [README de l'étape 4](04step4_validation/README.md).
+Le détail est dans les README de l'[étape 4](04step4_validation/README.md) et de l'[étape 5](05step5_analyse/README.md).
+
+## Premiers résultats d'analyse (étape 5)
+
+Ventes et locations sont toujours analysées séparément.
+
+| | Médiane | Moyenne |
+|---|---|---|
+| Prix de vente | 74,7 M FCFA | 104,6 M FCFA |
+| Loyer | 325 000 FCFA | 417 962 FCFA |
+| Prix de vente au m² | 624 852 FCFA | 735 795 FCFA |
+
+La moyenne est au-dessus de la médiane : quelques biens très chers étirent la distribution vers la droite. Par catégorie, la villa a le prix au m² médian le plus élevé (906 133 FCFA) et le terrain le plus bas (64 765 FCFA). Par ville, Dakar arrive en tête (1 021 546 FCFA/m²).
 
 ### Correspondance des colonnes
 
@@ -148,6 +162,14 @@ La clé est `(type_bien, ville, surface, type_transaction)`. La date d'un acte n
 
 **Conflits d'identifiant : quarantaine.**
 Deux lignes de la même source avec le même identifiant, mais des valeurs différentes : on ne sait pas laquelle est juste. Il n'y en a aucune dans les données actuelles.
+
+**Ventes et locations ne sont jamais mélangées** (§5.4). Le prix au m² n'est calculé que pour les ventes : la périodicité des loyers est inconnue pour l'agence et les particuliers.
+
+**Chaque seuil d'atypie ne juge que les biens concernés.** `prix_atypique` ne s'applique plus qu'aux ventes, `loyer_atypique` (25 000 à 5 000 000 FCFA) aux locations. Un bien non concerné est « non évaluable », et non « respecté » : le taux de conformité ne compte que les biens concernés.
+
+**Locaux commerciaux et terrains exclus du contrôle salles de bain / chambres.** Ce ne sont pas des logements : 0 chambre y est normal.
+
+**Prix au m² : fourchette large.** Elle est déduite des cas extrêmes du référentiel des catégories (`prix_min / surface_max` à `prix_max / surface_min`). Peu de faux avertissements, mais elle ne détecte que les incohérences grossières (×211 entre les bornes pour le terrain).
 
 **Agence : seule la feuille « Annonces » contient des biens.**
 La feuille « Params » contient des métadonnées (version, date d'export). Elle n'est pas chargée comme données.
