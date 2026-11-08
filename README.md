@@ -19,14 +19,16 @@ pip install -r requirements.txt
 Avec l'environnement virtuel activé, les tests se lancent **depuis le dossier de chaque étape** :
 
 ```bash
-cd 05step5_analyse
+cd 06step6_notebook
 python -m src.main         # pipeline complet : nettoyage, validation, quarantaine, doublons, rapport qualité
 python -m pytest -v        # tests de l'étape
 ```
 
+Le notebook d'analyse est `06step6_notebook/notebooks/01_exploration.ipynb`. Ouvre-le avec le noyau du venv, puis Redémarrer le noyau et Tout exécuter.
+
 Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la racine.
 
-`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 à 5 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
+`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 à 6 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
 
 ## Avancement
 
@@ -37,7 +39,7 @@ Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la raci
 | 3 | Chargement des données | ✅ Terminée — voir [03step3_chargement/README.md](03step3_chargement/README.md) |
 | 4 | Validation et nettoyage | ✅ Terminée — voir [04step4_validation/README.md](04step4_validation/README.md) |
 | 5 | NumPy et Pandas | ✅ Terminée — voir [05step5_analyse/README.md](05step5_analyse/README.md) |
-| 6 | Jupyter Notebook | À faire |
+| 6 | Jupyter Notebook | ✅ Terminée — voir [06step6_notebook/README.md](06step6_notebook/README.md) |
 | 7 | Exportation et reproductibilité | À faire |
 
 ## Structure du projet
@@ -51,6 +53,7 @@ immoanalyse_dataset/
 ├── 03step3_chargement/             # étape 3 : lecture et harmonisation des 5 sources, inventaire
 ├── 04step4_validation/             # étape 4 : nettoyage, règles, quarantaine, doublons, rapport qualité
 ├── 05step5_analyse/                # étape 5 : statistiques NumPy/Pandas, prix au m², seuils du §6.2
+├── 06step6_notebook/               # étape 6 : notebook d'analyse exploratoire (notebooks/01_exploration.ipynb)
 ├── requirements.txt
 └── README.md
 ```
@@ -101,7 +104,7 @@ Le chargement ne fait que renommer et ranger les colonnes. Toute correction a li
 
 Le détail est dans les README de l'[étape 4](04step4_validation/README.md) et de l'[étape 5](05step5_analyse/README.md).
 
-## Premiers résultats d'analyse (étape 5)
+## Résultats d'analyse (étapes 5 et 6)
 
 Ventes et locations sont toujours analysées séparément.
 
@@ -111,7 +114,13 @@ Ventes et locations sont toujours analysées séparément.
 | Loyer | 325 000 FCFA | 417 962 FCFA |
 | Prix de vente au m² | 624 852 FCFA | 735 795 FCFA |
 
-La moyenne est au-dessus de la médiane : quelques biens très chers étirent la distribution vers la droite. Par catégorie, la villa a le prix au m² médian le plus élevé (906 133 FCFA) et le terrain le plus bas (64 765 FCFA). Par ville, Dakar arrive en tête (1 021 546 FCFA/m²).
+La moyenne est au-dessus de la médiane : quelques biens très chers étirent la distribution vers la droite.
+
+- **Le type de bien est le premier facteur de prix** : le prix au m² médian va de 64 765 FCFA (terrain) à 906 133 FCFA (villa).
+- **Dakar est la ville la plus chère** : 1 147 198 FCFA/m² hors terrains, 63 % au-dessus de la médiane nationale. Sa périphérie suit (Pikine, Rufisque, Guédiawaye). Les autres régions sont proches les unes des autres.
+- **Les loyers des trois sources sont du même ordre** (médianes de 315 000 à 345 000 FCFA). Cela suggère des loyers mensuels partout, mais ce n'est qu'une hypothèse.
+
+Le détail, avec les graphiques et leurs lectures, est dans le [notebook](06step6_notebook/notebooks/01_exploration.ipynb) et le [README de l'étape 6](06step6_notebook/README.md).
 
 ### Correspondance des colonnes
 
@@ -170,6 +179,10 @@ Deux lignes de la même source avec le même identifiant, mais des valeurs diff�
 **Locaux commerciaux et terrains exclus du contrôle salles de bain / chambres.** Ce ne sont pas des logements : 0 chambre y est normal.
 
 **Prix au m² : fourchette large.** Elle est déduite des cas extrêmes du référentiel des catégories (`prix_min / surface_max` à `prix_max / surface_min`). Peu de faux avertissements, mais elle ne détecte que les incohérences grossières (×211 entre les bornes pour le terrain).
+
+**Comparaison des villes : ventes hors terrains.** La part de terrains varie de 4 % à 34 % selon la ville, et un terrain vaut environ dix fois moins au m². Avec les terrains, on comparerait des mélanges de biens différents (effet de composition) : Keur Massar serait la ville la moins chère, au lieu de la 14ᵉ.
+
+**Notebook : le notebook présente, `src/` calcule.** Aucun calcul métier n'est refait dans le notebook : il appelle les fonctions testées du pipeline et de l'analyse, puis affiche et commente leurs résultats.
 
 **Agence : seule la feuille « Annonces » contient des biens.**
 La feuille « Params » contient des métadonnées (version, date d'export). Elle n'est pas chargée comme données.
