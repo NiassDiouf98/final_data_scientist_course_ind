@@ -16,19 +16,23 @@ pip install -r requirements.txt
 
 ## Exécution
 
-Avec l'environnement virtuel activé, les tests se lancent **depuis le dossier de chaque étape** :
+La version finale est l'étape 7. Avec l'environnement virtuel activé :
 
 ```bash
-cd 06step6_notebook
-python -m src.main         # pipeline complet : nettoyage, validation, quarantaine, doublons, rapport qualité
-python -m pytest -v        # tests de l'étape
+cd 07step7_reproductibilite
+python -m src.main         # tout le pipeline, puis les 9 fichiers de résultats dans ../sortie/
+python -m pytest -v        # 104 tests
 ```
 
-Le notebook d'analyse est `06step6_notebook/notebooks/01_exploration.ipynb`. Ouvre-le avec le noyau du venv, puis Redémarrer le noyau et Tout exécuter.
+Une seule commande charge les 5 sources, normalise, valide, met en quarantaine, détecte les doublons, affiche le rapport qualité et écrit `sortie/`. Les fichiers de `sources/` ne sont jamais modifiés.
 
-Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la racine.
+Le notebook d'analyse est `07step7_reproductibilite/notebooks/01_exploration.ipynb`. Ouvre-le avec le noyau du venv, puis Redémarrer le noyau et Tout exécuter.
 
-`pytest` lancé depuis la racine ne fonctionne plus : les étapes 2 à 6 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
+Les étapes précédentes se lancent de la même façon, depuis leur dossier. Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la racine.
+
+`pytest` lancé depuis la racine ne fonctionne pas : les étapes 2 à 7 ont chacune un package `tests` avec des fichiers du même nom, et pytest refuse de les mélanger (`import file mismatch`).
+
+**Reproductibilité vérifiée** depuis un clone neuf, avec un venv neuf : les 104 tests passent, `python -m src.main` produit des fichiers identiques (même `md5sum`) à ceux du dépôt, et le notebook s'exécute de haut en bas sans erreur.
 
 ## Avancement
 
@@ -40,7 +44,24 @@ Pour l'étape 1 : `python3 01step1_python_data_structure/main.py` depuis la raci
 | 4 | Validation et nettoyage | ✅ Terminée — voir [04step4_validation/README.md](04step4_validation/README.md) |
 | 5 | NumPy et Pandas | ✅ Terminée — voir [05step5_analyse/README.md](05step5_analyse/README.md) |
 | 6 | Jupyter Notebook | ✅ Terminée — voir [06step6_notebook/README.md](06step6_notebook/README.md) |
-| 7 | Exportation et reproductibilité | À faire |
+| 7 | Exportation et reproductibilité | ✅ Terminée — voir [07step7_reproductibilite/README.md](07step7_reproductibilite/README.md) |
+
+## Critères d'acceptation
+
+| Critère | Où le vérifier |
+|---|---|
+| 1. Lecture des 5 sources | `src/loaders/`, `tests/test_loaders.py`, `tests/test_harmonisation.py` |
+| 2. Profilage par source | section « Par source » de `sortie/rapport_qualite.md`, partie B du notebook |
+| 3. Normalisation documentée et testée | `src/processing/traitement.py`, `tests/test_traitement.py`, README de l'[étape 4](04step4_validation/README.md) |
+| 4. Chaque quarantaine justifiée | colonne `motifs` de `sortie/quarantaine.csv`, `test_main_de_bout_en_bout` |
+| 5. Stratégie de doublons explicitée | `src/validation/doublons.py`, décision « Doublons » ci-dessous |
+| 6. Erreur ou valeur atypique | règles bloquantes (quarantaine) et d'avertissement (biens gardés), README de l'[étape 5](05step5_analyse/README.md) |
+| 7. Exports | `sortie/donnees_propres.csv`, `sortie/quarantaine.csv`, `sortie/rapport_qualite.md` |
+| 8. Au moins 5 tests | 104 tests dans `07step7_reproductibilite/tests/` |
+| 9. Décisions et limites | « Décisions de conception » ci-dessous, et chaque README d'étape |
+| 10. Un seul script de bout en bout | `python -m src.main` depuis `07step7_reproductibilite/` |
+
+Les chemins `src/` et `tests/` sont ceux de `07step7_reproductibilite/`.
 
 ## Structure du projet
 
@@ -54,6 +75,8 @@ immoanalyse_dataset/
 ├── 04step4_validation/             # étape 4 : nettoyage, règles, quarantaine, doublons, rapport qualité
 ├── 05step5_analyse/                # étape 5 : statistiques NumPy/Pandas, prix au m², seuils du §6.2
 ├── 06step6_notebook/               # étape 6 : notebook d'analyse exploratoire (notebooks/01_exploration.ipynb)
+├── 07step7_reproductibilite/       # étape 7 : version finale, exports (src/export/), main() de bout en bout
+├── sortie/                         # résultats produits par python -m src.main (étape 7)
 ├── requirements.txt
 └── README.md
 ```
@@ -122,6 +145,22 @@ La moyenne est au-dessus de la médiane : quelques biens très chers étirent la
 
 Le détail, avec les graphiques et leurs lectures, est dans le [notebook](06step6_notebook/notebooks/01_exploration.ipynb) et le [README de l'étape 6](06step6_notebook/README.md).
 
+## Les résultats exportés (étape 7)
+
+`python -m src.main` écrit 9 fichiers dans [`sortie/`](sortie/) :
+
+| Fichier | Contenu |
+|---|---|
+| [`rapport_qualite.md`](sortie/rapport_qualite.md) | **le rapport qualité** : synthèse, profil par source, quarantaine, valeurs manquantes, conformité par règle, doublons |
+| `donnees_propres.csv` / `.json` | les 2 983 biens nettoyés, sans quarantaine ni doublon exact |
+| `quarantaine.csv` / `.json` | les 187 biens **bruts**, avec leurs motifs |
+| `avertissements.csv` | un avertissement par ligne, et si le bien est conservé |
+| `doublons_probables.csv` | les 8 groupes de biens rapprochés |
+| `rapport_qualite.json` | tous les indicateurs, pour un traitement automatique |
+| `resume_regles.csv` | une ligne par règle, avec le dénominateur du taux |
+
+Les CSV utilisent le séparateur `;` et l'encodage UTF-8 avec signature : ils s'ouvrent directement dans Excel, accents compris.
+
 ### Correspondance des colonnes
 
 | Champ commun | Plateforme | Agence | Particuliers | Notaires | Historique |
@@ -183,6 +222,10 @@ Deux lignes de la même source avec le même identifiant, mais des valeurs diff�
 **Comparaison des villes : ventes hors terrains.** La part de terrains varie de 4 % à 34 % selon la ville, et un terrain vaut environ dix fois moins au m². Avec les terrains, on comparerait des mélanges de biens différents (effet de composition) : Keur Massar serait la ville la moins chère, au lieu de la 14ᵉ.
 
 **Notebook : le notebook présente, `src/` calcule.** Aucun calcul métier n'est refait dans le notebook : il appelle les fonctions testées du pipeline et de l'analyse, puis affiche et commente leurs résultats.
+
+**Exports : la quarantaine garde les données brutes.** On y lit `'à négocier'` ou `32/13/2024` tels que la source les a écrits : c'est ce qui justifie le motif. Les motifs sont joints par ` | ` en CSV (certains contiennent une virgule) et restent une liste en JSON.
+
+**Exports : pas de date dans le rapport, et `sortie/` est committé.** Deux exécutions donnent des fichiers identiques à l'octet près : git ne montre une différence que si les résultats changent. Un lecteur voit les résultats sans installer le projet.
 
 **Agence : seule la feuille « Annonces » contient des biens.**
 La feuille « Params » contient des métadonnées (version, date d'export). Elle n'est pas chargée comme données.

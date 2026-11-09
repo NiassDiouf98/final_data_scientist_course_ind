@@ -1,0 +1,188 @@
+﻿source;id_local;type_bien;region;ville;date;prix;surface;chambres;salles_bain;type_transaction;periodicite;statut;motifs
+plateforme;PLT-00062;Terrain;Kédougou;Salémata;2023-04-04;à négocier;1131.9;0;0;vente;;En vente;prix illisible : 'à négocier'
+plateforme;PLT-00077;Appartement;Matam;Matam;2028-12-01;64862000;78.4;1;4;vente;;Vendu;La date d'un bien vendu ne peut pas être dans le futur
+plateforme;PLT-00085;Maison;Tambacounda;Tambacounda;2025-11-11;à négocier;163.7;4;1;vente;;Vendu;prix illisible : 'à négocier'
+plateforme;PLT-00211;Appartement;Ziguinchor;Ziguinchor;2020-08-07;595000;;1;4;location;mensuel;Loué;La surface doit être présente et supérieure à zéro
+plateforme;PLT-00222;Appartement;Dakar;Rufisque;2019-06-25;à négocier;55.1;3;2;vente;;Sous offre;prix illisible : 'à négocier'
+plateforme;PLT-00249;Villa;Louga;Linguère;2022-04-18;162813000;;2;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+plateforme;PLT-00507;Appartement;Kaolack;Kaolack;2023-09-10;85240000;;6;3;vente;;Vendu;La surface doit être présente et supérieure à zéro
+plateforme;PLT-00676;Terrain;Fatick;Gossas;2021-07-24;à négocier;472.4;0;0;vente;;En vente;prix illisible : 'à négocier'
+plateforme;PLT-00687;Appartement;Diourbel;Bambey;2023-12-24;63774000;;4;3;vente;;En vente;La surface doit être présente et supérieure à zéro
+plateforme;PLT-00712;Appartement;Kaolack;Kaolack;2023-06-27;à négocier;113.3;5;2;vente;;En vente;prix illisible : 'à négocier'
+plateforme;PLT-00729;Maison;Saint-Louis;Podor;2025-12-03;575000;;1;4;location;mensuel;Loué;La surface doit être présente et supérieure à zéro
+plateforme;PLT-00676;Terrain;Fatick;Gossas;2021-07-24;à négocier;472.4;0;0;vente;;En vente;prix illisible : 'à négocier'
+agence;AGT-00826;Appartement;Louga;Louga;12/09/2023;31286000;-30;3;1;vente;;Vendu;La surface doit être présente et supérieure à zéro
+agence;AGT-00950;Appartement;Fatick;Kaolack-Fatick;23/12/2019;0;66.6;1;3;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+agence;AGT-00994;Terrain;Kaffrine;Koungheul;04/02/2025;0;1250.6;0;0;location;;Disponible;Le prix doit être présent et supérieur à zéro
+agence;AGT-01044;Maison;Fatick;Gossas;02/02/2019;0;188.5;3;2;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+agence;AGT-01065;Appartement;Kolda;Médina Yoro Foulah;02/09/2018;47828000;-25;6;1;vente;;Vendu;La surface doit être présente et supérieure à zéro
+agence;AGT-01238;Terrain;Kédougou;Kédougou;24/08/2019;15497000;-30;0;0;vente;;En vente;La surface doit être présente et supérieure à zéro
+agence;AGT-01302;Studio;Kolda;Médina Yoro Foulah;14/10/2022;0;32.5;1;1;location;;Disponible;Le prix doit être présent et supérieur à zéro
+agence;AGT-01342;Appartement;Matam;Ourossogui;09/04/2020;0;52.4;6;4;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+agence;AGT-01356;Villa;Kaolack;Kaolack;08/06/2021;224970000;-12;6;4;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01464;Maison;Saint-Louis;Saint-Louis;2019-06-29;490000;;1;2;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01468;Appartement;Louga;Kébémer;23/02/2023;555000;;3;2;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01471;Maison;Dakar;Pikine;09/03/2024;71415000;;6;3;vente;;À confirmer;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01472;Maison;Kolda;Vélingara;2021-06-24;;60.2;1;2;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01476;Villa;Tambacounda;Goudiry;02/01/2025;136663000;;3;3;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01477;Villa;Fatick;Fatick;22/04/2024;;318.1;2;2;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01484;Appartement;Saint-Louis;Saint-Louis;16/01/2023;68635000;;6;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01485;Maison;Kaolack;Guinguinéo;04/11/2022;;222.4;4;4;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01496;Villa;Thiès;Mbour;2024-01-17;;427.0;5;1;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01499;Villa;Kaolack;Nioro du Rip;30/06/2018;;219.9;2;4;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01503;Maison;Sédhiou;Sédhiou;24/11/2023;;198.2;1;1;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01517;Terrain;Fatick;Gossas;2023-11-19;;754.2;0;0;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01520;Terrain;Louga;Louga;2024-11-02;68734000;;0;0;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01523;Villa;Thiès;Mbour;13/01/2019;;198.1;6;3;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01526;Villa;Saint-Louis;Saint-Louis;24/10/2024;428851000;;2;4;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01527;Terrain;Thiès;Tivaouane;14/06/2020;27665000;;0;0;vente;;À confirmer;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01529;Studio;Kolda;Vélingara;2021-05-30;;22.5;4;2;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01530;Studio;Kaolack;Nioro du Rip;06/12/2023;;24.8;3;1;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01535;Terrain;Dakar;Keur Massar;2020-03-07;42580000;;0;0;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01536;Studio;Kaffrine;Kaffrine;14/07/2022;13317000;;5;1;vente;;À confirmer;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01537;Appartement;Kolda;Vélingara;2022-09-07;;123.0;6;2;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01545;Appartement;Sédhiou;Sédhiou;25/09/2024;68287000;;1;1;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01548;Terrain;Sédhiou;Sédhiou;2022-12-21;83821000;;0;0;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01550;Maison;Diourbel;Bambey;16/07/2019;167356000;;4;4;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01563;Studio;Kaffrine;Birkelane;2019-08-24;None FCFA;32.4;4;2;vente;;En vente;prix illisible : 'None FCFA'
+particuliers;PRT-01565;Villa;Sédhiou;Bounkiling;21/12/2020;361348000;;6;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01571;Appartement;Kolda;Médina Yoro Foulah;2022-04-08;215000;;6;4;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01573;Maison;Kaolack;Guinguinéo;19/03/2025;53901000;;6;2;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01581;Appartement;Kaolack;Nioro du Rip;2022-05-02;37701000;;3;4;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01586;Appartement;Fatick;Kaolack-Fatick;2019-09-06;465000;;1;1;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01592;Terrain;Ziguinchor;Bignona;2022-10-20;;1099.1;0;0;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01593;Appartement;Dakar;Dakar;29/07/2020;735000;;2;2;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01599;Appartement;Saint-Louis;Podor;2021-06-02;;105.0;1;2;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01617;Maison;Sédhiou;Sédhiou;2024-07-31;175172000 FCFA;;2;4;vente;;À confirmer;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01619;Maison;Thiès;Mbour;17/04/2019;;151.3;2;1;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01629;Terrain;Dakar;Guédiawaye;16/04/2018;210000;;0;0;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01630;Maison;Thiès;Tivaouane;12/02/2021;67985000;;6;1;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01632;Studio;Thiès;Tivaouane;2025-09-04;;33.7;3;1;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01642;Terrain;Diourbel;Bambey;2022-11-25;;118.5;0;0;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01644;Terrain;Thiès;Tivaouane;2018-10-05;;1348.5;0;0;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01646;Villa;Kaffrine;Koungheul;23/10/2025;;248.4;6;1;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01649;Terrain;Thiès;Joal-Fadiouth;10/06/2023;;1446.1;0;0;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01665;Terrain;Kédougou;Saraya;27/09/2023;;;0;0;vente;;Vendu;Le prix doit être présent et supérieur à zéro | La surface doit être présente et supérieure à zéro
+particuliers;PRT-01680;Terrain;Kédougou;Saraya;28/04/2023;72106000;;0;0;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01690;Terrain;Kaolack;Guinguinéo;04/03/2025;;908.0;0;0;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01709;Appartement;Kaffrine;Birkelane;05/11/2020;;;6;4;location;;Loué;Le prix doit être présent et supérieur à zéro | La surface doit être présente et supérieure à zéro
+particuliers;PRT-01712;Maison;Diourbel;Diourbel;20/08/2019;142239000;;2;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01719;Villa;Kédougou;Kédougou;25/09/2022;;161.5;4;3;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01720;Maison;Ziguinchor;Ziguinchor;2020-07-09;;105.4;3;1;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01721;Terrain;Louga;Linguère;08/12/2024;105000;;0;0;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01724;Local commercial;Fatick;Gossas;21/11/2024;;293.9;0;4;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01727;Villa;Ziguinchor;Ziguinchor;30/05/2024;197255000;;4;3;vente;;À confirmer;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01736;Appartement;Diourbel;Bambey;09/03/2022;;84.7;5;1;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01739;Appartement;Saint-Louis;Saint-Louis;2021-07-09;;134.4;6;1;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01754;Appartement;Kaffrine;Kaffrine;2025-11-05;;;2;2;location;;Loué;Le prix doit être présent et supérieur à zéro | La surface doit être présente et supérieure à zéro
+particuliers;PRT-01755;Maison;Kaolack;Guinguinéo;04/12/2024;146326000;;4;1;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01759;Terrain;Diourbel;Diourbel;2025-11-01;51354000;;0;0;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01761;Terrain;Kaolack;Kaolack;07/07/2018;;;0;0;vente;;Vendu;Le prix doit être présent et supérieur à zéro | La surface doit être présente et supérieure à zéro
+particuliers;PRT-01765;Chambre;Dakar;Dakar;06/10/2019;;12.1;3;0;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01773;Studio;Diourbel;Diourbel;17/10/2025;;35.4;1;3;location;;Loué;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01774;Studio;Kaffrine;Kaffrine;14/02/2020;240000;;5;2;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01777;Villa;Matam;Kanel;30/09/2025;1210000;;1;3;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01778;Villa;Saint-Louis;Richard-Toll;03/06/2020;705000;quatre-vingt;2;4;location;;Loué;surface illisible : 'quatre-vingt'
+particuliers;PRT-01782;Local commercial;Thiès;Joal-Fadiouth;20/12/2025;;228.6;0;1;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01791;Chambre;Saint-Louis;Podor;01/06/2022;;11.1;3;0;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01798;Appartement;Kaolack;Guinguinéo;2020-12-03;87912000;;6;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01802;Chambre;Kaffrine;Birkelane;22/08/2023;90000;quatre-vingt;3;0;location;;Disponible;surface illisible : 'quatre-vingt'
+particuliers;PRT-01814;Terrain;Dakar;Dakar;2019-09-17;20913000;;0;0;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01816;Appartement;Thiès;Tivaouane;09/03/2020;;70.4;5;1;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01817;Maison;Sédhiou;Sédhiou;22/12/2018;61716000;;1;2;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01823;Villa;Louga;Linguère;2019-10-11;700000;;1;4;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01831;Studio;Fatick;Gossas;2019-05-15;105000;;6;1;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01836;Terrain;Fatick;Fatick;2019-10-11;;1288.2;0;0;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01838;Villa;Fatick;Gossas;14/11/2023;;436.1;4;2;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01842;Appartement;Diourbel;Touba;11/10/2018;;168.5;4;3;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01843;Maison;Ziguinchor;Bignona;2018-01-29;;87.4;5;4;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01845;Chambre;Louga;Louga;19/05/2018;16853000;;2;0;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01855;Appartement;Saint-Louis;Saint-Louis;27/05/2024;;59.0;4;1;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01861;Studio;Kaolack;Guinguinéo;08/05/2022;;25.8;5;3;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01862;Studio;Dakar;Pikine;2019-10-08;20863000;;2;2;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01864;Maison;Kolda;Médina Yoro Foulah;2024-01-22;;84.8;6;3;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01874;Maison;Thiès;Joal-Fadiouth;27/06/2019;795000;;6;4;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01876;Chambre;Kaffrine;Birkelane;2020-01-20;;29.6;5;0;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01883;Maison;Matam;Kanel;2021-07-27;145509000;;1;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01901;Maison;Kédougou;Saraya;14/06/2019;150291000;quatre-vingt;2;4;vente;;Vendu;surface illisible : 'quatre-vingt'
+particuliers;PRT-01903;Studio;Sédhiou;Sédhiou;2024-05-16;43824000;;4;4;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01920;Maison;Fatick;Kaolack-Fatick;29/09/2022;103807000;;4;4;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01924;Studio;Ziguinchor;Oussouye;06/03/2025;180000;;2;1;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01942;Villa;Thiès;Tivaouane;13/08/2018;;257.2;1;3;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01945;Studio;Saint-Louis;Richard-Toll;27/09/2021;160000;;2;1;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01952;Studio;Tambacounda;Bakel;03/08/2024;160000;quatre-vingt;1;1;location;;Disponible;surface illisible : 'quatre-vingt'
+particuliers;PRT-01956;Maison;Tambacounda;Goudiry;2023-10-25;580000;;2;1;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01962;Maison;Kédougou;Salémata;2024-06-04;755000;;4;1;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01966;Maison;Ziguinchor;Ziguinchor;14/10/2022;;171.3;5;1;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01975;Terrain;Kolda;Médina Yoro Foulah;2022-03-10;;381.2;0;0;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01985;Villa;Dakar;Pikine;2019-11-15;262304000;;2;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01986;Maison;Thiès;Thiès;30/01/2018;97312000;;6;4;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01990;Appartement;Diourbel;Mbacké;14/08/2019;;166.2;6;2;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01992;Villa;Saint-Louis;Saint-Louis;2025-10-15;;392.4;1;1;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01993;Maison;Matam;Ourossogui;2022-08-24;;98.2;4;1;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-01995;Appartement;Dakar;Rufisque;2018-05-22;70834000;;2;4;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-01996;Maison;Matam;Matam;16/05/2022;173078000;;3;3;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02000;Studio;Matam;Ourossogui;2023-04-28;245000;;6;2;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02001;Maison;Louga;Linguère;19/06/2019;;87.2;3;1;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02002;Studio;Tambacounda;Tambacounda;21/07/2024;12462000;;1;1;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02012;Appartement;Matam;Matam;2024-05-16;39934000;;1;1;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02018;Studio;Kaolack;Guinguinéo;19/06/2021;;25.3;6;1;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02020;Terrain;Ziguinchor;Bignona;14/12/2022;;;0;0;vente;;Vendu;Le prix doit être présent et supérieur à zéro | La surface doit être présente et supérieure à zéro
+particuliers;PRT-02026;Terrain;Ziguinchor;Bignona;07/09/2018;59097000;;0;0;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02027;Appartement;Louga;Kébémer;10/11/2023;58826000;;6;2;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02030;Chambre;Diourbel;Bambey;2022-04-18;;27.5;3;0;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02035;Villa;Louga;Linguère;29/12/2024;515000;;2;1;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02041;Terrain;Kolda;Médina Yoro Foulah;09/02/2021;175000;;0;0;location;;Disponible;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02043;Maison;Ziguinchor;Ziguinchor;03/02/2020;;123.3;1;3;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02046;Maison;Kaffrine;Koungheul;2019-01-02;None FCFA;;3;4;location;;Disponible;prix illisible : 'None FCFA' | La surface doit être présente et supérieure à zéro
+particuliers;PRT-02050;Terrain;Thiès;Mbour;2019-11-10;;516.1;0;0;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02054;Terrain;Fatick;Kaolack-Fatick;2024-04-11;87172000;;0;0;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02074;Terrain;Kolda;Médina Yoro Foulah;22/10/2022;;241.4;0;0;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02091;Studio;Sédhiou;Bounkiling;2024-11-14;18182000 FCFA;;5;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02093;Studio;Kaffrine;Birkelane;2024-04-25;;25.4;6;4;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02113;Maison;Matam;Matam;02/02/2024;;99.8;4;2;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02118;Appartement;Kédougou;Saraya;14/10/2019;57035000 FCFA;;1;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02122;Chambre;Dakar;Pikine;2021-11-04;;26.1;4;0;vente;;À confirmer;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02123;Appartement;Saint-Louis;Saint-Louis;2018-03-18;220000;;1;2;location;;Loué;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02124;Maison;Saint-Louis;Richard-Toll;19/10/2019;88150000;;5;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02125;Maison;Louga;Louga;07/12/2023;89136000;;4;3;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02135;Terrain;Sédhiou;Bounkiling;12/11/2020;61359000;;0;0;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02137;Villa;Saint-Louis;Podor;2018-02-19;;151.3;5;3;location;;Disponible;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02139;Maison;Kaffrine;Kaffrine;2020-12-08;;175.3;6;4;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02140;Studio;Kédougou;Kédougou;11/11/2023;17504000;;6;4;vente;;À confirmer;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02148;Villa;Kolda;Médina Yoro Foulah;2021-09-11;395069000;;4;2;vente;;En vente;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02154;Villa;Fatick;Fatick;2020-04-15;104282000;;6;1;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02162;Villa;Kaffrine;Koungheul;2023-01-13;239883000;;5;2;vente;;Vendu;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02167;Chambre;Diourbel;Bambey;13/12/2023;;11.7;4;0;vente;;En vente;Le prix doit être présent et supérieur à zéro
+particuliers;PRT-02169;Appartement;Tambacounda;Goudiry;2025-08-19;99378000;;2;1;vente;;À confirmer;La surface doit être présente et supérieure à zéro
+particuliers;PRT-02186;Terrain;Saint-Louis;Podor;2025-02-16;49714000;;0;0;vente;;Vendu;La surface doit être présente et supérieure à zéro
+notaires;NOT-02208;Appartement;Fatick;Kaolack-Fatick;2021-03-13;;73.3;2;;vente;;Vente conclue;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02245;Appartement;Saint-Louis;Podor;2024-04-02;;110.4;5;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02250;Studio;Louga;Louga;2022-09-29;;44.6;1;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02285;Terrain;Dakar;Pikine;2021-01-11;;1498.0;0;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02314;Villa;Diourbel;Mbacké;2021-01-29;;364.1;1;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02330;Maison;Kaolack;Guinguinéo;2024-02-25;;66.9;6;;vente;;Acte signé;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02361;Maison;Diourbel;Diourbel;2023-06-24;;85.0;4;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02362;Appartement;Sédhiou;Goudomp;2019-05-01;;160.9;5;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02394;Maison;Kédougou;Kédougou;32/13/2024;69528000.0;238.3;2;;vente;;VENDU;date illisible : '32/13/2024'
+notaires;NOT-02396;Studio;Kolda;Vélingara;32/13/2024;30816000.0;54.5;2;;vente;;Vente conclue;date illisible : '32/13/2024'
+notaires;NOT-02400;Villa;Louga;Kébémer;2018-11-16;;214.8;3;;vente;;Vente conclue;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02428;Maison;Ziguinchor;Ziguinchor;2020-03-14;;211.9;1;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02441;Villa;Ziguinchor;Ziguinchor;32/13/2024;424671000.0;149.4;3;;vente;;Vendu;date illisible : '32/13/2024'
+notaires;NOT-02474;Appartement;Louga;Louga;2024-05-28;;153.9;4;;vente;;Vente conclue;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02475;Villa;Saint-Louis;Podor;2024-07-24;;121.2;1;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02484;Maison;Kédougou;Kédougou;2024-10-02;;115.5;3;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02556;Studio;Kolda;Kolda;2022-01-07;;29.9;2;;vente;;Vendu;Le prix doit être présent et supérieur à zéro
+notaires;NOT-02559;Maison;Dakar;Pikine;32/13/2024;179791000.0;207.9;1;;vente;;Vendu;date illisible : '32/13/2024'
+notaires;NOT-02565;Villa;Ziguinchor;Ziguinchor;32/13/2024;266366000.0;180.3;3;;vente;;Vendu;date illisible : '32/13/2024'
+notaires;NOT-02584;Maison;Louga;Kébémer;32/13/2024;94166000.0;96.3;3;;vente;;Vendu;date illisible : '32/13/2024'
+historique;HIS-0072;Terrain;Ziguinchor;Bignona;2019-10-16;N/A;190.8;0;0;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0128;Terrain;Saint-Louis;Podor;2018-05-16;N/A;654,4;0;0;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0251;Studio;Thiès;Mbour;27/03/2018;N/A;43.7;1;3;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0269;Appartement;Dakar;Keur Massar;2018-09-21;N/A;148.7;3;4;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0325;APPARTEMENT;Thiès;Thiès;2019-04-17;N/A;67.2;1;4;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0372;Studio;Saint-Louis;Saint-Louis;2018-08-20;N/A;40.1;6;4;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0423;LOCAL COMMERCIAL;Louga;Linguère;12/12/2019;N/A;121.9;0;1;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0430;Local commercial;Kaolack;Kaolack;2019-09-02;N/A;106.9;0;3;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0478;LOCAL COMMERCIAL;Diourbel;Bambey;02/12/2018;N/A;52,3;0;2;vente;;;Le prix doit être présent et supérieur à zéro
+historique;HIS-0506;Maison;Matam;Ourossogui;2018-07-22;N/A;208.8;1;1;vente;;;Le prix doit être présent et supérieur à zéro

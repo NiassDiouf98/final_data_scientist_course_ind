@@ -1,0 +1,17 @@
+﻿groupe;source;id_local;type_bien;region;ville;date;prix;surface;chambres;salles_bain;type_transaction;periodicite;statut
+1;plateforme;PLT-00157;Appartement;Ziguinchor;Ziguinchor;2020-09-07;39664000.0;110.0;6;2;vente;;Vendu
+1;plateforme;PLT-00280;Appartement;Ziguinchor;Ziguinchor;2018-08-21;100671000.0;110.0;5;4;vente;;En vente
+2;agence;AGT-00963;Appartement;Thiès;Joal-Fadiouth;2021-07-02;27722000;123.7;6;1;vente;;En vente
+2;particuliers;PRT-01604;Appartement;Thiès;Joal-Fadiouth;2022-12-20;30452000;123.7;6;2;vente;;Vendu
+3;agence;AGT-01042;Studio;Sédhiou;Bounkiling;2020-01-31;21681000;41;5;4;vente;;Vendu
+3;particuliers;PRT-02173;Studio;Sédhiou;Bounkiling;2025-09-26;24122000;41.0;4;3;vente;;En vente
+4;agence;AGT-01098;Appartement;Thiès;Thiès;2023-05-19;64976000;168;1;4;vente;;En vente
+4;notaires;NOT-02557;Appartement;Thiès;Thiès;2020-09-07;121510000.0;168.0;2;;vente;;Vendu
+5;agence;AGT-01179;Appartement;Kolda;Vélingara;2020-07-22;114867000;158.7;6;2;vente;;En vente
+5;historique;HIS-0071;Appartement;Kolda;Vélingara;2018-02-27;115100000.0;158.7;2;3;vente;;
+6;agence;AGT-01195;Appartement;Thiès;Joal-Fadiouth;2024-11-16;47508000;58.1;6;4;vente;;En vente
+6;particuliers;PRT-02151;Appartement;Thiès;Joal-Fadiouth;2025-11-07;118235000;58.1;6;4;vente;;En vente
+7;particuliers;PRT-01461;Studio;Fatick;Gossas;2022-05-11;18152000;50.0;4;4;vente;;En vente
+7;particuliers;PRT-02191;Studio;Fatick;Gossas;2025-06-01;17244400;50.0;4;4;vente;;En vente
+8;particuliers;PRT-01967;Maison;Kaffrine;Koungheul;2019-07-10;50875000;243.5;1;3;vente;;Vendu
+8;notaires;NOT-02269;Maison;Kaffrine;Koungheul;2020-11-23;66566000.0;243.5;4;;vente;;Acte signé

@@ -1,0 +1,15 @@
+﻿regle;respectee;violee;non_evaluable;evaluables;taux_conformite
+prix_positif;3086;98;0;3184;96.9
+type_bien_reconnu;3184;0;0;3184;100.0
+transaction_valide;3184;0;0;3184;100.0
+id_present;3184;0;0;3184;100.0
+surface_positive;3096;88;0;3184;97.2
+date_valide;3178;6;0;3184;99.8
+prix_atypique;2608;3;573;2611;99.9
+surface_atypique;3096;4;84;3100;99.9
+date_non_future_si_vendu;3177;1;6;3178;100.0
+loyer_atypique;478;2;2704;480;99.6
+chambres_atypiques;1134;0;2050;1134;100.0
+salles_bain_atypiques;2095;88;1001;2183;96.0
+ville_region_coherentes;3172;4;8;3176;99.9
+prix_m2_hors_fourchette;2547;7;630;2554;99.7

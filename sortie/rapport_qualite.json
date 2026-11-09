@@ -1,0 +1,132 @@
+{
+  "total_recus": 3184,
+  "manquants_par_colonne": {
+    "periodicite": 3007,
+    "surface": 80,
+    "prix": 85,
+    "salles_bain": 410,
+    "statut": 528,
+    "ville": 8
+  },
+  "doublons_exacts": {
+    "nombre": 14,
+    "taux": 0.4,
+    "definition_taux": "lignes en trop / nombre total de biens reçus × 100"
+  },
+  "conflits": 0,
+  "doublons_probables": 8,
+  "erreurs_conversion_par_champ": {
+    "prix": 8,
+    "surface": 4,
+    "date": 6
+  },
+  "regles": {
+    "prix_positif": {
+      "respectee": 3086,
+      "violee": 98,
+      "non_evaluable": 0,
+      "evaluables": 3184,
+      "taux_conformite": 96.9
+    },
+    "type_bien_reconnu": {
+      "respectee": 3184,
+      "violee": 0,
+      "non_evaluable": 0,
+      "evaluables": 3184,
+      "taux_conformite": 100.0
+    },
+    "transaction_valide": {
+      "respectee": 3184,
+      "violee": 0,
+      "non_evaluable": 0,
+      "evaluables": 3184,
+      "taux_conformite": 100.0
+    },
+    "id_present": {
+      "respectee": 3184,
+      "violee": 0,
+      "non_evaluable": 0,
+      "evaluables": 3184,
+      "taux_conformite": 100.0
+    },
+    "surface_positive": {
+      "respectee": 3096,
+      "violee": 88,
+      "non_evaluable": 0,
+      "evaluables": 3184,
+      "taux_conformite": 97.2
+    },
+    "date_valide": {
+      "respectee": 3178,
+      "violee": 6,
+      "non_evaluable": 0,
+      "evaluables": 3184,
+      "taux_conformite": 99.8
+    },
+    "prix_atypique": {
+      "respectee": 2608,
+      "violee": 3,
+      "non_evaluable": 573,
+      "evaluables": 2611,
+      "taux_conformite": 99.9
+    },
+    "surface_atypique": {
+      "respectee": 3096,
+      "violee": 4,
+      "non_evaluable": 84,
+      "evaluables": 3100,
+      "taux_conformite": 99.9
+    },
+    "date_non_future_si_vendu": {
+      "respectee": 3177,
+      "violee": 1,
+      "non_evaluable": 6,
+      "evaluables": 3178,
+      "taux_conformite": 100.0
+    },
+    "loyer_atypique": {
+      "respectee": 478,
+      "violee": 2,
+      "non_evaluable": 2704,
+      "evaluables": 480,
+      "taux_conformite": 99.6
+    },
+    "chambres_atypiques": {
+      "respectee": 1134,
+      "violee": 0,
+      "non_evaluable": 2050,
+      "evaluables": 1134,
+      "taux_conformite": 100.0
+    },
+    "salles_bain_atypiques": {
+      "respectee": 2095,
+      "violee": 88,
+      "non_evaluable": 1001,
+      "evaluables": 2183,
+      "taux_conformite": 96.0
+    },
+    "ville_region_coherentes": {
+      "respectee": 3172,
+      "violee": 4,
+      "non_evaluable": 8,
+      "evaluables": 3176,
+      "taux_conformite": 99.9
+    },
+    "prix_m2_hors_fourchette": {
+      "respectee": 2547,
+      "violee": 7,
+      "non_evaluable": 630,
+      "evaluables": 2554,
+      "taux_conformite": 99.7
+    }
+  },
+  "corriges": 1216,
+  "quarantaine": 187,
+  "avec_avertissement": 91,
+  "entierement_conformes": {
+    "nombre": 1834,
+    "taux": 57.6,
+    "definition": "ni quarantaine, ni avertissement, ni correction",
+    "denominateur": "nombre total de biens reçus"
+  }
+}
